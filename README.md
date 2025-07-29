@@ -1,9 +1,5 @@
 # Welcome to project
 
-## Project info
-
-**URL**: https://lovable.dev/projects/24d68f84-71ad-4de8-b70b-a3ce4f8e9d9d
-
 # Contentful Landing Page Builder
 
 This repository contains a **custom Contentful App** (fullscreen) and a **Next.js frontend** that enables editors to visually arrange and save landing page layouts using drag-and-drop. The layout is stored in Contentful and rendered statically via Next.js.
