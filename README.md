@@ -4,21 +4,48 @@
 
 **URL**: https://lovable.dev/projects/24d68f84-71ad-4de8-b70b-a3ce4f8e9d9d
 
-## How can I edit this code?
+# Contentful Landing Page Builder
 
-There are several ways of editing your application.
+This repository contains a **custom Contentful App** (fullscreen) and a **Next.js frontend** that enables editors to visually arrange and save landing page layouts using drag-and-drop. The layout is stored in Contentful and rendered statically via Next.js.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/24d68f84-71ad-4de8-b70b-a3ce4f8e9d9d) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## ✨ Features
 
-**Use your preferred IDE**
+- 🔲 Drag-and-drop interface to arrange:
+  - Hero Block (heading, subtitle, CTA, background)
+  - Two Column Row (text + image)
+  - 2x2 Image Grid (Contentful assets)
+- 🧠 Powered by Redux (with undo/redo, auto-save via middleware)
+- 💾 Layout saved as JSON to Contentful entry field (`layoutConfig`)
+- 🌐 Frontend with two SSG pages: `/landing/page-1` and `/landing/page-2`
+- 🔍 Dynamic metadata + JSON-LD for SEO
+- ⚡ Optimized images via `next/image`
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🛠️ Setup Instructions
+
+### Prerequisites
+- Node.js (v18+)
+- Yarn or npm
+- Contentful space with:
+  - Content model including:
+    - `layoutConfig` (JSON field)
+    - `heroBlock`, `twoColumnBlock`, `imageBlock` (linked or embedded)
+- Contentful Management Token & Space ID
+- Next.js 15.3+ with App Router enabled
+
+---
+
+## 🔧 Environment Variables
+
+See [.env.example](./.env.example)
+
+
+
 
 Follow these steps:
 
@@ -50,24 +77,6 @@ npm run dev
 - Click on "New codespace" to launch a new Codespace environment.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## What technologies are used for this project?
 
-This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/24d68f84-71ad-4de8-b70b-a3ce4f8e9d9d) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
